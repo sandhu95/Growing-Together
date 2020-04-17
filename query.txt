@@ -1,0 +1,123 @@
+   1. Create a MongoDB Database
+
+    -> use GrowingTogether
+
+   2.Create Collections under the database (at least 6 collections). 
+
+    -> db.createCollection("customer")
+    -> db.createCollection("policy")
+    -> db.createCollection("product")
+    -> db.createCollection("staff")
+    -> db.createCollection("department")
+    -> db.createCollection("address")
+
+  3.Create Documents under each collection (at least 8-10 document for each collection)
+
+         <------------- DATA FOR CUSTOMER COLLECTION-------------->
+    -> db.customer.insert({"customerid":"4","name":"peter Hamilton","phoneNumber":"6396845699","email":"pidlkjitj@gmail.com","DOB":"25/11/1997"});
+    -> db.customer.insert({"customerid":"5","name":"James Titler","phoneNumber":"8963845699","email":"killkjij@gmail.com","DOB":"02/02/1988"});
+    -> db.customer.insert({"customerid":"6","name":"Hawkins","phoneNumber":"7653845699","email":"juklkjij@gmail.com","DOB":"02/08/1948"});
+    -> db.customer.insert({"customerid":"7","name":"Justin","phoneNumber":"8974845699","email":"hundal@gmail.com","DOB":"08/09/2018"});
+    -> db.customer.insert({"customerid":"8","name":"Hunter","phoneNumber":"7569845699","email":"popdal@gmail.com","DOB":"08/09/1918"});
+    -> db.customer.insert({"customerid":"9","name":"warner","phoneNumber":"5369845699","email":"iodal@gmail.com","DOB":"08/09/1999"});
+    -> db.customer.insert({"customerid":"10","name":"Brunswick","phoneNumber":"3639845699","email":"sandhu@gmail.com","DOB":"09/12/1999"});
+
+        <-------DATA FOR POLICY COLLECTION-------->
+
+   -> db.policy.insert({"policyid":"p1","value":"1000"})
+   -> db.policy.insert({"policyid":"p2","value":"1200"})
+   -> db.policy.insert({"policyid":"p3","value":"200"})
+   -> db.policy.insert({"policyid":"p4","value":"700"})
+   -> db.policy.insert({"policyid":"p5","value":"750"})
+   -> db.policy.insert({"policyid":"p6","value":"7250"})
+   -> db.policy.insert({"policyid":"p7","value":"720"})
+   -> db.policy.insert({"policyid":"p8","value":"2720"})
+
+
+
+       <-----------DATA FOR PRODUCT COLLECTION------------->
+
+   ->  db.product.insert({"productid":"p1","productname":"window Insurance"})
+   ->  db.product.insert({"productid":"p2","productname":"Car Insurance"})  
+   ->  db.product.insert({"productid":"p3","productname":"Home Insurance"}) 
+   ->  db.product.insert({"productid":"p4","productname":"student Insurance"}) 
+   ->  db.product.insert({"productid":"p5","productname":"Life Insurance"}) 
+   ->  db.product.insert({"productid":"p6","productname":"Automobile Insurance"}) 
+   ->  db.product.insert({"productid":"p7","productname":"Health Insurance"}) 
+   ->  db.product.insert({"productid":"p8","productname":"Mobile Insurance"}) 
+   ->  db.product.insert({"productid":"p9","productname":"job Insurance"}) 
+     
+       <----------------- DATA FOR STAFF COLLECTION---------------->
+
+  ->   db.staff.insert({"staffid":"s1","staffname":"Gundeep","phoneNumber":"5443245699","email":"gundeep@gmail.com","Departmentid":"D2"}
+  ->   db.staff.insert({"staffid":"s2","staffname":"Jobandeep","phoneNumber":"5444245699","email":"jaban@gmail.com","Departmentid":"D7"}
+  ->   db.staff.insert({"staffid":"s3","staffname":"Manpreet","phoneNumber":"5444267899","email":"sandhu@gmail.com","Departmentid":"D4"}
+  ->   db.staff.insert({"staffid":"s4","staffname":"Ramanpreet","phoneNumber":"5489067899","email":"raman@gmail.com","Departmentid":"D2"}
+  ->   db.staff.insert({"staffid":"s5","staffname":"Harmandeep","phoneNumber":"5489069909","email":"harman@gmail.com","Departmentid":"D2"}
+  ->   db.staff.insert({"staffid":"s6","staffname":"Mehak","phoneNumber":"5679068909","email":"mehak@gmail.com","Departmentid":"D3"}
+  ->   db.staff.insert({"staffid":"s7","staffname":"Kirandeep","phoneNumber":"5675678909","email":"kiran@gmail.com","Departmentid":"D2"}
+  ->   db.staff.insert({"staffid":"s8","staffname":"Gagandeep","phoneNumber":"5443245699","email":"gagan@gmail.com","Departmentid":"D1"}
+
+       <-------------DATA FOR DEPARTMENT COLLECTION--------------->
+
+  ->   db.department.insert({"departmentid":"D1","departmentname":"IT","usercreate":"20/02/2019"})
+  ->   db.department.insert({"departmentid":"D2","departmentname":"Planning","usercreate":"25/03/2019"})
+  ->   db.department.insert({"departmentid":"D3","departmentname":"Architecture","usercreate":"15/04/2019"})
+  ->   db.department.insert({"departmentid":"D4","departmentname":"Monitoring","usercreate":"16/04/2019"})
+  ->   db.department.insert({"departmentid":"D5","departmentname":"Finanace","usercreate":"19/04/2019"})
+  ->   db.department.insert({"departmentid":"D6","departmentname":"Sales","usercreate":"26/02/2019"})
+  ->   db.department.insert({"departmentid":"D7","departmentname":"Marketing","usercreate":"20/05/2019"})
+  ->   db.department.insert({"departmentid":"D8","departmentname":"Insurance","usercreate":"17/06/2019"})
+   
+        <----------------DATA FOR ADDRESS COLLECTION----------------->
+
+   ->   db.address.insert({"id":"A1","city":"Scarborough","province":"Ontario","country":"Canada","Zipcode":"M1R2R3"})
+   ->   db.address.insert({"id":"A2","city":"Calgary","province":"alberta","country":"Canada","Zipcode":"M1R2R4"})
+   ->   db.address.insert({"id":"A3","city":"toronto","province":"ontario","country":"Canada","Zipcode":"M1R2K5"})
+   ->   db.address.insert({"id":"A4","city":"winipeg","province":"Manitoba","country":"Canada","Zipcode":"L6R2Y6"})
+   ->   db.address.insert({"id":"A5","city":"edmonton","province":"Alberta","country":"Canada","Zipcode":"L6K2Y6"})
+   ->   db.address.insert({"id":"A6","city":"regina","province":"sasketchwan","country":"Canada","Zipcode":"R3K2Y6"})
+   ->   db.address.insert({"id":"A7","city":"victoria","province":"British Coloumbia","country":"Canada","Zipcode":"R3K2Y7"})
+   ->   db.address.insert({"id":"A8","city":"vancouver","province":"British Coloumbia","country":"Canada","Zipcode":"R7K8Y7"})
+
+  4.Create at least 5 queries to find data from Documents (the find queries must have combination of and/or/gt/ls/like commands available to retrieve data). 
+     
+      AND QUERY
+   -> db.address.find({$and:[{"city":"toronto"},{"province":"ontario"}]})
+    
+      
+     OR QUERY
+   -> db.address.find({$or:[{"city":"toronto"},{"province":"ontario"}]})
+   
+      GREATER THAN QUERY
+   -> db.policy.find({"value":{$gt:1500}}).pretty()
+
+      COMBINATION OF OR AND GREATER THAN QUERY
+   -> db.policy.find({$or:[{"policyid":"p2"},{"value":{$gt:1500}}]}).pretty()
+
+      COMBINATION OF OR ,AND QUERY
+   -> db.policy.find({$or:[{"policyid":"p2"},{$and:[{"value":1200},{"value":{$gt:1500}}]}]})
+
+   -> db.policy.find({$or:[{"policyid":"p2"},{"value":{$gt:1500}}]}).pretty()
+
+
+  5.Create at least 2 queries where data are coming from 2 different collections
+
+  ->db.policy.aggregate([{$lookup:{from:"product",localField:"policyid",foreignField:"productid",as:"productpolicy"}}])
+
+  -> db.staff.aggregate([{$lookup:{from:"department","localField:"Departmentid",foreignField:"departmentid",as:"productspolicy"}}])
+
+
+  6. Create 2 sort queries.
+
+  -> db.policy.find().sort({value:1})
+  -> db.policy.find({"value":{$gt:1200}}).sort({value:-1})
+
+
+  7. Create 2 aggregation functionalities
+
+  -> db.department.aggregate([$match:{$or: [{"department":"D2"},{"departmentid":"D3"}]}}])
+  -> db.policy.aggregate([$group:{_id:"$value",policyids:{$push:"$policyid"}}}])
+
+
+
