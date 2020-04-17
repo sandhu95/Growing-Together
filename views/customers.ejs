@@ -42,7 +42,7 @@
                         <td> <span><%= customer[i].email %></span>;</td>
                             <td> <span><%= customer[i].DOB %></span></td>
                             <td><a href="edit/<%= customer[i].customerid %>"><button>Update</button></a></td>
-                            <td><form method = "POST" action="delete/<%= customer[i].customerid %>?_method=DELETE"><button>Delete</button></form></td>
+                            <td><form method = "POST" action="delete/<%= customer[i]._id %>?_method=DELETE"><button>Delete</button></form></td>
                            
             </tr>
     

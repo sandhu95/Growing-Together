@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 app.set('view engine', 'ejs')
 const MongoClient = require("mongodb").MongoClient;
+var objectID = require('mongodb').ObjectID
 
 const bodyParser= require('body-parser')
 const url = "mongodb://localhost:27017/GrowingTogether";
@@ -89,26 +90,13 @@ app.get('/customers', (req, res) => {
       .catch(/* ... */)
   })
 
-  app.get('/edit/:id', async(req,res) =>{
-      try{
-        const result =await customer.findByID(req.params.id)
-        res.render('updateCustomers.ejs',{ result: customer})
-      }
-      catch{
-        res.redirect('/customers')
-
-      }
-})
-
-  app.put('/update/:id',(req,res) =>{
-    try{
-    const result = customer.findByID(req.params)
-    res.render('updateEmployee.ejs',{customer: result})
-    }catch{
-     
-    }
-})
-
 app.delete('/delete/:id',(req,res) =>{
-  res.send('Delete Author'+ req.params.id)
+  var id = req.params.id
+  var myobj = { "_id": objectID(id) };
+  db.collection("customer").deleteOne(myobj, function(err, result) {
+    if (err) throw err;
+    console.log("1 document deleted in Policy collection");
+    res.status(200);
+    res.redirect("/customers");
+    });
 })
