@@ -9,7 +9,7 @@
  background-size: 100%;	 
 }
 
-.contact-title{
+.contact-tittle{
     margin-top:0px;
     color:black;
     text-transform:uppercase;
@@ -24,6 +24,7 @@
 #form1{
    margin-top:40px;
    color:#000000;
+
    }
 .form-control{
     width:650px;
