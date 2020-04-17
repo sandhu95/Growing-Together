@@ -90,12 +90,33 @@ app.get('/customers', (req, res) => {
       .catch(/* ... */)
   })
 
+  app.get('/edit/:id', (req,res) =>{
+      var id = req.params.id
+      db.collection('customer').find({'_id':objectID(id)}).toArray()
+      .then(results => {
+        res.render('ucustomer.ejs',{customer: results})
+      })
+      .catch(/* ... */)
+})
+
+  app.put('/update/:id',(req,res) =>{
+    var id = req.params.id
+    var myobj = { "_id": objectID(id)};
+    var newvalues = {$set: req.body};
+    db.collection("customer").updateOne(myobj, newvalues,function(err, result) {
+      if (err) throw err;
+      console.log("1 document Updated in customer collection");
+      res.status(200);
+      res.redirect("/customers");
+      });
+  })
+
 app.delete('/delete/:id',(req,res) =>{
   var id = req.params.id
   var myobj = { "_id": objectID(id) };
   db.collection("customer").deleteOne(myobj, function(err, result) {
     if (err) throw err;
-    console.log("1 document deleted in Policy collection");
+    console.log("1 document deleted in customer collection");
     res.status(200);
     res.redirect("/customers");
     });

@@ -32,6 +32,8 @@
             <th>Phone Number</th>
             <th>Email</th>
             <th>Date Of Birth</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
     <% for(var i = 0; i < customer.length; i++) {%>
         
@@ -41,11 +43,9 @@
                     <td> <span><%= customer[i].phoneNumber %></td>
                         <td> <span><%= customer[i].email %></span>;</td>
                             <td> <span><%= customer[i].DOB %></span></td>
-                            <td><a href="edit/<%= customer[i].customerid %>"><button>Update</button></a></td>
+                            <td><a href="edit/<%= customer[i]._id %>"><button>Update</button></a></td>
                             <td><form method = "POST" action="delete/<%= customer[i]._id %>?_method=DELETE"><button>Delete</button></form></td>
-                           
-            </tr>
-    
+            </tr>  
      <% } %>
     </table>
     <br>
@@ -57,11 +57,10 @@
         <div id="center">
         The hottest deals and discount in your inbox<br>
         <div id="size">Subscribe to Our Newsletter
-           <form method="post" action="Con_Sub_Message.html">
-              <input type="text" name="firstname" placeholder="Name*" required>
-              <input type="email" name="email" placeholder="E-mail" required>
-              <button  type="Subscribe" class="subscribe" onclick="onSuccess()"  value="Subscribe">Subscribe</button>
-           </form>
+         <br>
+         <input type="text" name="firstname" placeholder="Name*" required>
+         <input type="email" name="email" placeholder="E-mail" required>
+         <a href="/Con_Sub_Message.html"><button  type="Subscribe" >Subscribe</button></a>  
         </div>
            <br>
            <center><A HREF="AboutUs.html">AboutUs</A>&nbsp;&nbsp;

@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>customers</title>
+<title>Update Customer</title>
 <link rel="stylesheet" type"text/css" href="../CSS/REGISTRATION.css">
 </head>
 <body >
@@ -25,12 +25,12 @@
 
     
     <div class="Registration Form-form">
-       <form id="form1" action="/Customers/<%= customer.customerid%>?_method=PUT" method="POST">
-          <input id="input1" name="customerid" type="text" class="form-control" placeholder="Enter Your Id" required><br>
-          <input id="input1" name="name" type="text" class="form-control" placeholder="Enter Your Name" required><br>
-          <input id="input1" name="phoneNumber" type="number" class="form-control" placeholder="Enter Your Phone Number" required><br>
-          <input id="input1" name="email" type="email" class="form-control" placeholder="Enter Your Email" required><br>
-          <input id="input1" name="DOB" type="date" class="form-control" placeholder="Enter Your Date Of Birth: dd/mm/yyyy" required><br>
+       <form id="form1" action="../update/<%= customer[0]._id%>?_method=PUT" method="POST">
+          <input id="input1" name="customerid" type="text" class="form-control" value="<%= customer[0].customerid %>" required><br>
+          <input id="input1" name="name" type="text" class="form-control" value="<%= customer[0].name %>" required><br>
+          <input id="input1" name="phoneNumber" type="number" class="form-control" value="<%= customer[0].phoneNumber %>" required><br>
+          <input id="input1" name="email" type="email" class="form-control" value="<%= customer[0].email %>" required><br>
+          <input id="input1" name="DOB" type="date" class="form-control" value="<%= customer[0].DOB %>" required><br>
           <button type="submit">Update</button>
        </form>
      </div>
@@ -43,11 +43,10 @@
         <div id="center">
         The hottest deals and discount in your inbox<br>
         <div id="size">Subscribe to Our Newsletter
-           <form method="post" action="Con_Sub_Message.html">
-              <input type="text" name="firstname" placeholder="Name*" required>
-              <input type="email" name="email" placeholder="E-mail" required>
-              <button  type="Subscribe" class="subscribe" onclick="onSuccess()"  value="Subscribe">Subscribe</button>
-           </form>
+            <br>
+            <input type="text" name="firstname" placeholder="Name*" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <a href="/Con_Sub_Message.html"><button  type="Subscribe" >Subscribe</button></a>  
         </div>
            <br>
            <center><A HREF="AboutUs.html">AboutUs</A>&nbsp;&nbsp;
